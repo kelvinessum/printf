@@ -9,7 +9,7 @@ int _printf(const char *format, ...)
 {
 	convert_match m[] = {
 		{"%s", print_string}, {"%c", printf_charac},
-		{"%%", printf_percent}
+		{"%%", printf_percent}, {"%d", printf_integer}, {"%i", printf_base10dec}, {"%b", printf_unsigned}, {"%u", printf_unsigned}, {"%o", printf_octal}, {"%x", printf_hex_lower}, {"%X", printf_hex_upper}
 	};
 
 	va_list args;
